@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<!-- ======================================================================= -->
+<!-- config.xml: Place this file inside the www directory                    -->
+<!-- Template version: 06/18                                                  -->
+<!-- ======================================================================= -->
+
+    <!-- =================================================================== -->
+    <!-- Change 'id' below: edu.asu.cis430.SEMESTER.ASURITE.APPNAME          -->
+    <!-- Change 'version' below to suit your needs                           -->
+    <!-- =================================================================== -->
+
+<widget 
+    id          = "edu.asu.cis430.fall18.aaronho1.WalkAroundDevils"  
+    version     = "0.0.1" 
+    xmlns       = "http://www.w3.org/ns/widgets" 
+    xmlns:gap   = "http://phonegap.com/ns/1.0">
+
+    <!-- =================================================================== -->
+    <!-- Change 'name', 'description', and 'author' tags below               -->
+    <!-- =================================================================== -->
+
+    <name>WalkAroundDevilsMobile App</name>
+
+    <description>
+        A simple app to allow students to find the most optimal bike route around walk-only zones.
+    </description>
+
+    <author email="aaronho1@asu.edu" href="http://www.asu.edu">
+            TechPlayers       
+    </author>
+
+    <content src="index.html" />  <!-- the starting point of your hybrid app -->
+
+    <!-- =================================================================== -->
+    <!-- Plugins are libraries that extend the base functionality of the     -->
+    <!-- HTML/CSS/JS model to include device specific features of mobile     -->
+    <!-- see https://build.phonegap.com/plugins                              -->
+    <!--                                                                     -->
+    <!-- add any additional plugins below                                    -->
+    <!-- =================================================================== -->
+
+    <plugin name="cordova-plugin-statusbar"  spec="2.4.1"      />
+    <plugin name="cordova-plugin-whitelist"  spec="1.3.3"      />
+
+    <access origin="*"                                         />
+    <access origin="http://*.googleapis.com" subdomains="true" />
+    <access origin="http://*.gstatic.com"    subdomains="true" />
+
+    <!-- =================================================================== -->
+    <!-- Preferences: configure defaults for your hybrid app                 -->
+    <!--                                                                     -->
+    <!-- for example:                                                        -->
+    <!-- Orientation: values: landscape, portrait, or default (allow both)   -->
+    <!-- DisallowOverscroll: have the webview not "bounce" when touched      -->
+    <!-- android-minSdkVersion:  set minimum threshhold of OS versions       -->
+    <!--   14 = Android 4.0.1 (Ice Cream Sandwich)                           -->
+    <!--   for more see https://source.android.com/source/build-numbers.html -->
+    <!-- more preferences are available at                                   -->
+    <!-- at http://docs.phonegap.com/phonegap-build/configuring/preferences/ -->
+    <!-- =================================================================== -->
+    <preference name = "Orientation"           value = "default" />
+    <preference name = "DisallowOverscroll"    value = "true"    />
+    <preference name = "android-minSdkVersion" value = "14"      />
+
+    <!-- =================================================================== -->
+    <!-- These are for the cordova-plugin-statusbar plugin                   -->
+    <!-- =================================================================== -->
+        <preference name="StatusBarOverlaysWebView" value="false"        />
+        <preference name="StatusBarBackgroundColor" value="#000000"      /> 
+        <preference name="StatusBarStyle"           value="lightcontent" />  
+
+    <!-- =================================================================== -->
+    <!-- allow-intents: if the user selects the url, allow the               -->
+    <!-- system (mobile os) to honor the users intent and open it            -->
+    <!-- =================================================================== -->
+    <allow-intent href="http://*/*"      />   <!-- open browser          -->
+    <allow-intent href="https://*/*"     />   <!-- open browser          -->
+    <allow-intent href="tel:*"           />   <!-- dial phone #          -->
+    <allow-intent href="sms:*"           />   <!-- send a text           -->
+    <allow-intent href="mailto:*"        />   <!-- open mail to          -->
+    <allow-intent href="geo:*"           />   <!-- open maps             -->
+  
+    <platform name="android">  
+        <allow-intent href="market:*"    />   <!-- open google playstore -->
+    </platform>  
+      
+    <platform name="ios">  
+        <allow-intent href="itms:*"      />   <!-- open app store        -->
+        <allow-intent href="itms-apps:*" />
+    </platform>
+</widget>
